@@ -1,4 +1,4 @@
-public class Entrenador extends PersonaSeleccion {
+public class Entrenador extends Persona {
     private String idFederacion;
 
     public Entrenador(int id, String nombre, String apellidos, int edad, String idFederacion) {
@@ -6,19 +6,19 @@ public class Entrenador extends PersonaSeleccion {
         this.idFederacion = idFederacion;
     }
 
+    public String getIdFederacion() { return idFederacion; }
+
     @Override
     public void concentrarse() {
-        System.out.println("El entrenador está preparando tácticas.");
-    }
-
-    public void dirigirPartido() {
-        System.out.println("El entrenador está dirigiendo el partido.");
+        System.out.println(getNombre() + " " + getApellidos() + " (Entrenador) se está concentrando.");
     }
 
     public void dirigirEntrenamiento() {
-        System.out.println("El entrenador está dirigiendo el entrenamiento.");
+        System.out.println(getNombre() + " " + getApellidos() + " está dirigiendo un entrenamiento.");
     }
 
-    public String getIdFederacion() { return idFederacion; }
-    public void setIdFederacion(String idFederacion) { this.idFederacion = idFederacion; }
+    public void dirigirPartido() {
+        System.out.println(getNombre() + " " + getApellidos() + " está dirigiendo un partido.");
+    }
 }
+

@@ -1,4 +1,4 @@
-public class Masajista extends PersonaSeleccion {
+public class Masajista extends Persona {
     private String titulacion;
     private int aniosExperiencia;
 
@@ -8,18 +8,15 @@ public class Masajista extends PersonaSeleccion {
         this.aniosExperiencia = aniosExperiencia;
     }
 
+    public String getTitulacion() { return titulacion; }
+    public int getAniosExperiencia() { return aniosExperiencia; }
+
     @Override
     public void concentrarse() {
-        System.out.println("El masajista se prepara para asistir al equipo.");
+        System.out.println(getNombre() + " " + getApellidos() + " (Masajista) se está concentrando.");
     }
 
     public void darMasaje() {
-        System.out.println("El masajista está dando un masaje.");
+        System.out.println(getNombre() + " " + getApellidos() + " está dando un masaje.");
     }
-
-    public String getTitulacion() { return titulacion; }
-    public void setTitulacion(String titulacion) { this.titulacion = titulacion; }
-
-    public int getAniosExperiencia() { return aniosExperiencia; }
-    public void setAniosExperiencia(int aniosExperiencia) { this.aniosExperiencia = aniosExperiencia; }
 }
